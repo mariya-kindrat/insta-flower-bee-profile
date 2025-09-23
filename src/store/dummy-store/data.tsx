@@ -48,7 +48,6 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
 
   },
 
-
   {
     id: "2",
     slug: "elegant-bouquet",

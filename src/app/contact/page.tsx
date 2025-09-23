@@ -103,7 +103,6 @@ export default function ContactPage() {
                 </button>
               </div>
 
-              {/* small note */}
               <p className="mt-4 text-center text-xs text-graphite/60">
                 By sending this form you agree to be contacted regarding your inquiry. Your details are kept private.
               </p>
