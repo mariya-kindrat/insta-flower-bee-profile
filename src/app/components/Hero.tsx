@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="relative h-full flex flex-col items-center justify-end text-center px-4 pb-[12vh] md:pb-[16vh]">
         <div className="w-full max-w-3xl mx-auto backdrop-blur-sm bg-ivory/30 rounded-2xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-8 shadow-sm">
           <h1
-            className={`${greatVibes.className} text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-graphite tracking-wide leading-tight`}
+            className={`${greatVibes.className} text-5xl sm:text-6xl md:text-7xl lg:text-9xl text-graphite tracking-wide whitespace-nowrap`}
           >
             Iryna Melnyk
           </h1>
