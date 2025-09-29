@@ -108,34 +108,7 @@ export default function ContactPage() {
               </p>
             </form>
 
-            <div className="px-6 md:px-10 pb-8">
-              <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                <a
-                  href="mailto:irynamelnyk339@gmail.com"
-                  className="group flex items-center justify-center gap-2 rounded-xl border border-line bg-white/60 px-4 py-3 hover:bg-white transition"
-                >
-                  <EnvelopeIcon className="h-5 w-5" />
-                  <span className="font-medium">irynamelnyk339@gmail.com</span>
-                </a>
 
-                <a
-                  href="tel:+14756554646"
-                  className="group flex items-center justify-center gap-2 rounded-xl border border-line bg-white/60 px-4 py-3 hover:bg-white transition"
-                >
-                  <PhoneIcon className="h-5 w-5" />
-                  <span className="font-medium">+1 (475) 655-4646</span>
-                </a>
-
-                <Link
-                  href="https://www.instagram.com/instaflowerbee"
-                  target="_blank"
-                  className="group flex items-center justify-center gap-2 rounded-xl border border-line bg-white/60 px-4 py-3 hover:bg-white transition"
-                >
-                  <CameraIcon className="h-5 w-5" />
-                  <span className="font-medium">@instaflowerbee</span>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>

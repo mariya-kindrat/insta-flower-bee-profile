@@ -1,14 +1,17 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import BackButton from "./BackButton";
 
 type Props = {
   title: string;
   description?: string;
   images: string[];
+  backHref?: string;
+  backLabel?: string;
 };
 
-export default function GalleryDetail({ title, description, images }: Props) {
+export default function GalleryDetail({ title, description, images, backHref, backLabel = "Back" }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -20,7 +23,7 @@ export default function GalleryDetail({ title, description, images }: Props) {
   const next = () => setIndex((prev) => (prev + 1) % images.length);
   const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
 
-  // Keyboard controls for modal navigation
+
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => {
@@ -34,6 +37,7 @@ export default function GalleryDetail({ title, description, images }: Props) {
 
   return (
     <main className="px-6 md:px-10 lg:px-20 py-10">
+      {backHref && <BackButton href={backHref} label={backLabel} className="mb-6" />}
       <h1 className="font-serif text-3xl mb-4">{title}</h1>
       {description && <p className="text-neutral-700 mb-6">{description}</p>}
 

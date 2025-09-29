@@ -132,5 +132,23 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     ],
     description: "Joyful birthday celebration with colorful arrangements.",
   },
+  {
+    id: "6",
+    slug: "workshop",
+    title: "Floral Workshop",
+    category: "event",
+    cover: "/images/workshop/photo-63.jpg",
+    images: [
+      "/images/workshop/photo-50.jpg",
+      "/images/workshop/photo-51.jpg",
+      "/images/workshop/photo-52.jpg",
+      "/images/workshop/photo-69.jpg",
+      "/images/workshop/photo-70.jpg",
+      "/images/workshop/photo-133.jpg",
+      "/images/workshop/photo-137.jpg",
+      "/images/workshop/photo-63.jpg",
+    ],
+    description: "Hands-on floral arrangement workshop for enthusiasts.",
+  }
 
 ];

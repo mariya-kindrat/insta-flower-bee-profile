@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div className="relative w-full h-[420px] rounded-2xl overflow-hidden shadow-sm">
             <Image
-              src="/images/hero/iryna.jpg"
+              src="/images/hero/hero1.jpg"
               alt="Iryna Melnyk"
               fill
               className="object-cover"

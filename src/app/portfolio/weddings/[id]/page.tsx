@@ -9,5 +9,13 @@ export default async function WeddingDetail({ params }: { params: Promise<{ id: 
   if (!item) notFound();
 
   const images = item.images?.length ? item.images : [item.cover];
-  return <GalleryDetail title={item.title} description={item.description} images={images} />;
+  return (
+    <GalleryDetail
+      title={item.title}
+      description={item.description}
+      images={images}
+      backHref="/portfolio/weddings"
+      backLabel="Back to Weddings"
+    />
+  );
 }
