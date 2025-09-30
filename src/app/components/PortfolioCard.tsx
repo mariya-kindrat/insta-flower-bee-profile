@@ -14,7 +14,6 @@ export default function PortfolioCard({ href, title, cover }:
           draggable={false}
         />
       </div>
-      {/* Slightly bolder, improved readability without being too heavy */}
       <h3 className="mt-3 font-serif text-xl font-semibold text-graphite tracking-tightish">
         {title}
       </h3>

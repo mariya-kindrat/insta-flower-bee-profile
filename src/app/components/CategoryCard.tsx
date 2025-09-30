@@ -13,7 +13,7 @@ export default function CategoryCard({
   label: string;
 }) {
   const first = PORTFOLIO_DATA.find(i => i.category === category);
-  const cover = first?.cover ?? "/images/placeholder.png"; 
+  const cover = first?.cover ?? "/images/placeholder.png";
 
   return (
     <Link href={href} className="group block rounded-2xl border p-0 overflow-hidden bg-white/70">
