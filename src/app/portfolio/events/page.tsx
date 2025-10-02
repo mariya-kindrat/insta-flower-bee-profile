@@ -1,5 +1,5 @@
-import PortfolioCard from "@/app/components/PortfolioCard";
-import BackButton from "@/app/components/BackButton";
+import PortfolioCard from "@/components/PortfolioCard";
+import BackButton from "@/components/BackButton";
 import { PORTFOLIO_DATA } from "@/store/dummy-store/data";
 
 export default function EventsPage() {

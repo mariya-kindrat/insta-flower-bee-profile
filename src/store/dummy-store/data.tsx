@@ -61,6 +61,12 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
       "/images/bouquet/img4.jpg",
       "/images/bouquet/img5.jpg",
       "/images/bouquet/img7.jpg",
+      "/images/bouquet/IMG_0191.jpg",
+      "/images/bouquet/IMG_3058.jpg",
+      "/images/bouquet/IMG_6606.jpg",
+      "/images/bouquet/IMG_7616.jpg",
+      "/images/bouquet/IMG_7660.jpg",
+      "/images/bouquet/IMG_8399.jpg",
     ],
     description: "A timeless bouquet with soft textures and elegant colors.",
   },
@@ -96,6 +102,10 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     title: "Flower in Baskets",
     category: "bouquet",
     cover: "/images/bouquet1.jpeg",
+    images: [
+      "/images/bouquet/photo-18.jpg",
+      "/images/bouquet/IMG_2223.jpg",
+    ],
     description: "Beautifully arranged baskets for all occasions.",
   },
 
@@ -149,6 +159,26 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
       "/images/workShop/photo-63.jpg",
     ],
     description: "Hands-on floral arrangement workshop for enthusiasts.",
+  },
+
+  {
+    id: "7",
+    slug: "elegant-wedding",
+    title: "Elegant Wedding",
+    category: "wedding",
+    cover: "/images/wedding1/img1.JPG",
+    images: [
+      "/images/wedding1/img.JPG",
+      "/images/wedding1/IMG_1664.jpg",
+      "/images/wedding1/IMG_1668.jpg",
+      "/images/wedding1/IMG_1691.jpg",
+      "/images/wedding1/IMG_1699.jpg",
+      "/images/wedding1/IMG_1704.jpg",
+      "/images/wedding1/IMG_3002.jpg",
+      "/images/wedding1/IMG_3009.jpg",
+      "/images/wedding1/IMG_3010.jpg",
+    ],
+    description: "Charming elegant wedding with classic floral designs.",
   }
 
 ];

@@ -1,4 +1,4 @@
-import GalleryDetail from "@/app/components/GaleryDetail";
+import GalleryDetail from "@/components/GaleryDetail";
 import { PORTFOLIO_DATA } from "@/store/dummy-store/data";
 import { notFound } from "next/navigation";
 

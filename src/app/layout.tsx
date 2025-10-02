@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Cormorant_Garamond,  Inter } from "next/font/google";
-import { CameraIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { Cormorant_Garamond, Inter } from "next/font/google";
+import { CameraIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -46,21 +47,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 text-graphite">
-                <a
-                  href="mailto:irynamelnyk@gmail.com"
+                <Link
+                  href="/contact"
                   className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
                 >
                   <EnvelopeIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Email</span>
-                </a>
-
-                <a
-                  href="tel:+111335454646"
-                  className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
-                >
-                  <PhoneIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Phone</span>
-                </a>
+                  <span>Contact</span>
+                </Link>
 
                 <a
                   href="https://www.instagram.com/instaflowerbee"

@@ -49,7 +49,7 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+
           <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
             {navigationItems.map((item) => (
               <Link
@@ -63,7 +63,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
+          
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 text-graphite hover:text-forest transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm"
