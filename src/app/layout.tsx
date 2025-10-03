@@ -20,8 +20,8 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Iryna Melnyk · Florist & More",
-  description: "Timeless flowers for heartfelt moments.",
+  title: "Florist & Wedding Decorator in Connecticut | Iryna Melnyk",
+  description: "Wedding florist and event decoration in Connecticut. Elegant floral designs by Iryna Melnyk.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,5 +1,14 @@
 
+import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About | Florist & Wedding Decorator in Connecticut",
+  description:
+    "I’m Iryna Melnyk, a Connecticut florist & wedding decorator creating timeless floral designs and elegant event decor.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return (
@@ -18,7 +27,7 @@ export default function AboutPage() {
 
           <div className="max-w-xl md:ml-2">
             <h2 className="font-serif italic text-3xl md:text-4xl text-graphite tracking-tightish">
-              I’m Iryna — florist & stylist
+              I’m Iryna — Florist & Wedding Decorator in Connecticut
             </h2>
             <p className="mt-4 leading-relaxed text-graphite/80">
               Flowers are my language of warmth and elegance. I create timeless
@@ -68,18 +77,20 @@ export default function AboutPage() {
             Let’s create something tender and unforgettable.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <a
+            <Link
               href="/portfolio"
+              aria-label="View wedding and event floral portfolio by Iryna Melnyk"
               className="px-7 py-3 rounded-full bg-graphite text-ivory hover:bg-graphite/90 transition font-semibold text-lg"
             >
               View Portfolio
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
+              aria-label="Book a consultation with wedding decorator & florist Iryna Melnyk"
               className="px-7 py-3 rounded-full border-2 border-graphite/70 text-graphite hover:bg-graphite hover:text-ivory transition font-semibold text-lg"
             >
               Book a Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

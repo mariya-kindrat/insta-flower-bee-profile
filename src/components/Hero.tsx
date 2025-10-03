@@ -24,6 +24,8 @@ const Hero = () => {
         loop
         muted
         playsInline
+        poster=""
+        aria-label="Wedding floral designs by Iryna Melnyk"
       >
         <source src="/images/irinavideo2.mp4" type="video/mp4" />
       </video>
@@ -44,15 +46,17 @@ const Hero = () => {
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="/portfolio"
+              aria-label="See wedding and floral portfolio by Iryna Melnyk"
               className="px-6 py-3 sm:px-7 rounded-full bg-graphite text-ivory hover:bg-graphite/90 transition font-semibold text-base sm:text-lg"
             >
               View Portfolio
             </Link>
             <Link
               href="/contact"
+              aria-label="Book a consultation with wedding decorator & florist Iryna Melnyk"
               className="px-6 py-3 sm:px-7 rounded-full border-2 border-graphite/70 text-graphite hover:bg-graphite hover:text-ivory transition font-semibold text-base sm:text-lg"
             >
-              Book a Consultation
+              Book a Free Consultation
             </Link>
           </div>
         </div>

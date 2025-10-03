@@ -17,8 +17,8 @@ export interface PortfolioItem {
 export const PORTFOLIO_DATA: PortfolioItem[] = [
   {
     id: "1",
-    slug: "anna-and-mike",
-    title: "Anna & Mike Wedding",
+    slug: "White-Green-Wedding",
+    title: "White Green Wedding",
     category: "wedding",
     cover: "/images/wedding/img11.JPG",
     images: [
