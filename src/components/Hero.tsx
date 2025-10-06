@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { Great_Vibes, Cormorant_Garamond } from "next/font/google";
 
@@ -24,7 +25,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        poster=""
+        poster="/images/wedding1/IMG_3009.jpg"
         aria-label="Wedding floral designs by Iryna Melnyk"
       >
         <source src="/images/irinavideo2.mp4" type="video/mp4" />

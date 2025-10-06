@@ -1,11 +1,11 @@
 import GalleryDetail from "@/components/GaleryDetail";
 import { PORTFOLIO_DATA } from "@/store/dummy-store/data";
 import { notFound } from "next/navigation";
+import { PageParams } from "@/types";
 
-
-export default async function EventsDetail({ params }: { params: Promise<{ id: string }> }) {
+const EventsDetail = async ({ params }: PageParams<{ id: string }>) => {
   const { id } = await params;
-  const item = PORTFOLIO_DATA.find(x => x.category === "event" && x.id === id);
+  const item = PORTFOLIO_DATA.find((x) => x.category === "event" && x.id === id);
   if (!item) notFound();
 
   const images = item.images?.length ? item.images : [item.cover];
@@ -18,4 +18,6 @@ export default async function EventsDetail({ params }: { params: Promise<{ id: s
       backLabel="Back to Events"
     />
   );
-}
+};
+
+export default EventsDetail;

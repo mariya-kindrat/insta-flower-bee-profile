@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
 
-export async function POST() {
+export const POST = async (): Promise<NextResponse> => {
   return NextResponse.json(
     { success: false, message: "Logging not configured" },
     { status: 200 }
   );
-}
+};
 
-export async function GET() {
+export const GET = async (): Promise<NextResponse> => {
   return NextResponse.json(
     { success: false, message: "Logging not configured" },
     { status: 200 }
   );
-}
+};

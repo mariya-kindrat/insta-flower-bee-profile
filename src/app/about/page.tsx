@@ -1,4 +1,3 @@
-
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-export default function AboutPage() {
+const AboutPage = () => {
   return (
     <main className="text-graphite">
 
@@ -96,4 +95,6 @@ export default function AboutPage() {
       </section>
     </main>
   );
-}
+};
+
+export default AboutPage;

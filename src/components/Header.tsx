@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -26,7 +26,6 @@ const Header = () => {
     <header className="relative bg-ivory border-b border-hairline">
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-20">
         <div className="flex items-center justify-between py-6 md:py-8">
-          {/* Text Logo */}
           <Link
             href="/"
             className="font-serif text-2xl md:text-3xl font-bold tracking-wide text-graphite hover:text-forest transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm"
@@ -35,7 +34,6 @@ const Header = () => {
             Iryna Melnyk
           </Link>
 
-          {/* Center Logo Image */}
           <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" onClick={closeMenu} className="focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm">
               <Image
@@ -63,7 +61,7 @@ const Header = () => {
             ))}
           </nav>
 
-          
+
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 text-graphite hover:text-forest transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm"
@@ -78,7 +76,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation Menu */}
         <div
           className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
             }`}

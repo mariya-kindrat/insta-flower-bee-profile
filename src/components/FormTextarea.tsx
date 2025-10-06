@@ -1,18 +1,7 @@
 import React from "react";
+import { FormTextareaProps } from "@/types";
 
-interface FormTextareaProps {
-  id: string;
-  name: string;
-  label: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  placeholder?: string;
-  required?: boolean;
-  error?: string;
-  rows?: number;
-}
-
-const FormTextarea: React.FC<FormTextareaProps> = ({
+const FormTextarea = ({
   id,
   name,
   label,
@@ -22,7 +11,7 @@ const FormTextarea: React.FC<FormTextareaProps> = ({
   required = false,
   error,
   rows = 6,
-}) => {
+}: FormTextareaProps) => {
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium mb-2">
@@ -44,8 +33,8 @@ const FormTextarea: React.FC<FormTextareaProps> = ({
         aria-invalid={!!error}
         aria-describedby={error ? `${id}-error` : undefined}
         className={`w-full rounded-xl border bg-white px-4 py-3 outline-none focus:ring-2 transition-colors ${error
-            ? "border-red-500 focus:ring-red-500/20"
-            : "border-line focus:ring-graphite/20"
+          ? "border-red-500 focus:ring-red-500/20"
+          : "border-line focus:ring-graphite/20"
           }`}
       />
       {error && (

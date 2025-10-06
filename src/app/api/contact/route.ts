@@ -1,86 +1,81 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
 
 const sanitizeInput = (input: string): string => {
   return input
     .trim()
-    .replace(/[<>]/g, '') 
-    .substring(0, 5000); 
+    .replace(/[<>]/g, "")
+    .substring(0, 5000);
 };
-
 
 const isValidEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
 
-export async function POST(request: NextRequest) {
+export const POST = async (request: NextRequest): Promise<NextResponse> => {
   try {
     const body = await request.json();
     const { name, email, phone, eventDate, city, inquiryType, message } = body;
 
-   
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
+        { error: "Name, email, and message are required" },
         { status: 400 }
       );
     }
 
     if (!isValidEmail(email)) {
       return NextResponse.json(
-        { error: 'Invalid email address' },
+        { error: "Invalid email address" },
         { status: 400 }
       );
     }
 
-    
     if (name.length < 2 || name.length > 100) {
       return NextResponse.json(
-        { error: 'Name must be between 2 and 100 characters' },
+        { error: "Name must be between 2 and 100 characters" },
         { status: 400 }
       );
     }
 
     if (message.length < 10 || message.length > 5000) {
       return NextResponse.json(
-        { error: 'Message must be between 10 and 5000 characters' },
+        { error: "Message must be between 10 and 5000 characters" },
         { status: 400 }
       );
     }
 
-  
     const sanitizedData = {
       name: sanitizeInput(name),
       email: sanitizeInput(email),
-      phone: phone ? sanitizeInput(phone) : '',
-      eventDate: eventDate ? sanitizeInput(eventDate) : '',
-      city: city ? sanitizeInput(city) : '',
-      inquiryType: sanitizeInput(inquiryType || 'General'),
+      phone: phone ? sanitizeInput(phone) : "",
+      eventDate: eventDate ? sanitizeInput(eventDate) : "",
+      city: city ? sanitizeInput(city) : "",
+      inquiryType: sanitizeInput(inquiryType || "General"),
       message: sanitizeInput(message),
     };
 
     if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not configured');
+      console.error("RESEND_API_KEY is not configured");
       return NextResponse.json(
-        { error: 'Email service is not configured' },
+        { error: "Email service is not configured" },
         { status: 500 }
       );
     }
 
     if (!process.env.RESEND_TO_EMAIL) {
-      console.error('RESEND_TO_EMAIL is not configured');
+      console.error("RESEND_TO_EMAIL is not configured");
       return NextResponse.json(
-        { error: 'Email recipient is not configured' },
+        { error: "Email recipient is not configured" },
         { status: 500 }
       );
     }
-    
+
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
+      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
       to: process.env.RESEND_TO_EMAIL,
       replyTo: sanitizedData.email,
       subject: `New ${sanitizedData.inquiryType} Inquiry from ${sanitizedData.name}`,
@@ -119,22 +114,22 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error("Resend error:", error);
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { error: "Failed to send email" },
         { status: 500 }
       );
     }
 
     return NextResponse.json(
-      { message: 'Email sent successfully', data },
+      { message: "Email sent successfully", data },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Error processing contact form:', error);
+    console.error("Error processing contact form:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }
-}
+};

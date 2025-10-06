@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function PortfolioPage() {
+const PortfolioPage = () => {
   return (
     <main className="px-6 md:px-10 lg:px-20 py-14">
       <h1 className="font-serif text-3xl md:text-4xl tracking-tightish text-graphite mb-8">Portfolio</h1>
@@ -50,4 +50,6 @@ export default function PortfolioPage() {
       </div>
     </main>
   );
-}
+};
+
+export default PortfolioPage;

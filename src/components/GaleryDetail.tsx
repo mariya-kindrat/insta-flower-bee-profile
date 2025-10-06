@@ -1,17 +1,17 @@
 "use client";
+
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import BackButton from "./BackButton";
+import { GalleryDetailProps } from "@/types";
 
-type Props = {
-  title: string;
-  description?: string;
-  images: string[];
-  backHref?: string;
-  backLabel?: string;
-};
-
-export default function GalleryDetail({ title, description, images, backHref, backLabel = "Back" }: Props) {
+const GalleryDetail = ({
+  title,
+  description,
+  images,
+  backHref,
+  backLabel = "Back"
+}: GalleryDetailProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -46,7 +46,6 @@ export default function GalleryDetail({ title, description, images, backHref, ba
       <h1 className="font-serif text-3xl mb-4">{title}</h1>
       {description && <p className="text-neutral-700 mb-6">{description}</p>}
 
-      {/* Gallery grid - centered if single image, responsive grid if multiple */}
       <div className={images.length === 1 ? "flex justify-center" : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"}>
         {images.map((src, i) => (
           <button
@@ -90,7 +89,6 @@ export default function GalleryDetail({ title, description, images, backHref, ba
               priority
             />
 
-            {/* Close button */}
             <button
               type="button"
               onClick={close}
@@ -100,7 +98,6 @@ export default function GalleryDetail({ title, description, images, backHref, ba
               ✕
             </button>
 
-            {/* Prev */}
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); prev(); }}
@@ -110,7 +107,6 @@ export default function GalleryDetail({ title, description, images, backHref, ba
               ‹
             </button>
 
-            {/* Next */}
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); next(); }}
@@ -120,7 +116,6 @@ export default function GalleryDetail({ title, description, images, backHref, ba
               ›
             </button>
 
-            {/* Counter */}
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 rounded-full px-3 py-1">
               {index + 1} / {images.length}
             </div>
@@ -129,4 +124,6 @@ export default function GalleryDetail({ title, description, images, backHref, ba
       )}
     </main>
   );
-}
+};
+
+export default GalleryDetail;

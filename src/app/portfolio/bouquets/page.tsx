@@ -2,10 +2,8 @@ import PortfolioCard from "@/components/PortfolioCard";
 import BackButton from "@/components/BackButton";
 import { PORTFOLIO_DATA } from "@/store/dummy-store/data";
 
-
-export default function BouquetsPage() {
-
-  const bouquets = PORTFOLIO_DATA.filter(i => i.category === "bouquet");
+const BouquetsPage = () => {
+  const bouquets = PORTFOLIO_DATA.filter((i) => i.category === "bouquet");
   return (
     <main className="px-6 md:px-10 lg:px-20 py-10">
       <BackButton href="/portfolio" label="Back to Portfolio" className="mb-6" />
@@ -22,4 +20,6 @@ export default function BouquetsPage() {
       </div>
     </main>
   );
-}
+};
+
+export default BouquetsPage;

@@ -1,18 +1,4 @@
-export type Category = "bouquet" | "wedding" | "event";
-
-export interface PortfolioItem {
-  id: string;
-  slug: string;
-  title: string;
-  category: Category;
-  cover: string;
-  images?: string[];
-  description?: string;
-  couple?: string;
-  location?: string;
-  date?: string;
-  palette?: string[];
-}
+import { PortfolioItem } from "@/types";
 
 export const PORTFOLIO_DATA: PortfolioItem[] = [
   {

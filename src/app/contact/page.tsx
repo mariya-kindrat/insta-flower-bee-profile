@@ -2,9 +2,10 @@
 
 import { CalendarIcon, MapPinIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { useState, FormEvent } from "react";
+import { ContactFormData, SubmitStatus } from "@/types";
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
+const ContactPage = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     phone: "",
@@ -15,10 +16,10 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
+    type: null,
+    message: ""
+  });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (
@@ -318,4 +319,6 @@ export default function ContactPage() {
       </section>
     </main>
   );
-}
+};
+
+export default ContactPage;

@@ -4,6 +4,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import { CameraIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import Header from "@/components/Header";
 import Link from "next/link";
+import { RootLayoutProps } from "@/types";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -11,20 +12,19 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
   display: "swap",
 });
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-
-
 export const metadata: Metadata = {
   title: "Florist & Wedding Decorator in Connecticut | Iryna Melnyk",
   description: "Wedding florist and event decoration in Connecticut. Elegant floral designs by Iryna Melnyk.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="bg-ivory text-brown font-sans min-h-screen flex flex-col">
@@ -71,4 +71,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

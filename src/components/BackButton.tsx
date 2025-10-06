@@ -1,17 +1,13 @@
 "use client";
+
 import { useRouter } from "next/navigation";
+import { BackButtonProps } from "@/types";
 
-interface BackButtonProps {
-  href?: string;
-  label?: string;
-  className?: string;
-}
-
-export default function BackButton({
+const BackButton = ({
   href,
   label = "Back",
   className = ""
-}: BackButtonProps) {
+}: BackButtonProps) => {
   const router = useRouter();
 
   const handleClick = () => {
@@ -44,4 +40,6 @@ export default function BackButton({
       <span className="font-medium">{label}</span>
     </button>
   );
-}
+};
+
+export default BackButton;

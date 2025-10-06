@@ -1,19 +1,7 @@
 import React from "react";
+import { FormInputProps } from "@/types";
 
-interface FormInputProps {
-  id: string;
-  name: string;
-  label: string;
-  type?: "text" | "email" | "tel" | "date";
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-  required?: boolean;
-  error?: string;
-  icon?: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
-}
-
-const FormInput: React.FC<FormInputProps> = ({
+const FormInput = ({
   id,
   name,
   label,
@@ -24,7 +12,7 @@ const FormInput: React.FC<FormInputProps> = ({
   required = false,
   error,
   icon: Icon,
-}) => {
+}: FormInputProps) => {
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium mb-2 flex items-center gap-2">

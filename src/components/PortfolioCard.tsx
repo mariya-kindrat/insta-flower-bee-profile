@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PortfolioCardProps } from "@/types";
 
-export default function PortfolioCard({ href, title, cover }:
-  { href: string; title: string; cover: string; }) {
+const PortfolioCard = ({ href, title, cover }: PortfolioCardProps) => {
   return (
     <Link href={href} className="group block select-none">
       <div className="relative aspect-[4/5] group bg-white rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300">
@@ -21,4 +21,6 @@ export default function PortfolioCard({ href, title, cover }:
       </h3>
     </Link>
   );
-}
+};
+
+export default PortfolioCard;
