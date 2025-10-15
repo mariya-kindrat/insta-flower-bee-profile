@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import WhatWeOffer from "@/components/WhatWeOffer";
 import About from "@/components/About";
 import { Metadata } from "next";
 
@@ -14,6 +15,7 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
+      <WhatWeOffer />
       <About />
     </main>
   );
