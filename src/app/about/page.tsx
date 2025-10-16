@@ -1,19 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Great_Vibes, Cormorant_Garamond } from "next/font/google";
-
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "About | Florist & Wedding Decorator in Connecticut",
@@ -25,7 +12,6 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <main className="text-graphite">
-
       <section className="bg-beige/40">
         <div className="mx-auto max-w-6xl px-6 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div className="relative w-full h-[420px] rounded-2xl overflow-hidden shadow-sm">
@@ -38,9 +24,9 @@ const AboutPage = () => {
           </div>
 
           <div className="max-w-xl md:ml-2">
-            <h2 className="font-serif italic text-3xl md:text-4xl text-graphite tracking-tightish">
-              I'm Iryna - Florist & Wedding Decorator in Connecticut
-            </h2>
+            <h1 className="font-serif italic text-3xl md:text-4xl text-graphite tracking-tightish">
+              I&apos;m Iryna - Florist & Wedding Decorator in Connecticut
+            </h1>
             <p className="mt-4 leading-relaxed text-graphite/80">
               Flowers are my language of warmth and elegance. I create timeless
               bouquets, romantic ceremony florals, and delicate table designs with
@@ -53,8 +39,8 @@ const AboutPage = () => {
             </p>
 
             <blockquote className="mt-6 border-l-2 border-graphite/40 pl-4 italic text-brown">
-              "I believe floristry is more than décor — it's a quiet way to say the
-              most important things."
+              &quot;I believe floristry is more than décor — it&apos;s a quiet way to say the
+              most important things.&quot;
             </blockquote>
           </div>
         </div>
@@ -86,7 +72,7 @@ const AboutPage = () => {
       <section className="bg-beige/40">
         <div className="mx-auto max-w-4xl px-6 py-14 text-center">
           <p className="font-serif italic text-2xl text-graphite tracking-tightish">
-            Let's create something tender and unforgettable.
+            Let&apos;s create something tender and unforgettable.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link

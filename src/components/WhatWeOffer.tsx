@@ -20,19 +20,19 @@ const offers: OfferItem[] = [
     id: "arrangements",
     title: "Arrangements & Bouquets",
     image: "/images/offers/IMG_1672.JPG",
-    link: "/portfolio",
+    link: "/portfolio/bouquets",
   },
   {
     id: "installations",
     title: "Floral Installations",
     image: "/images/offers/IMG_0265.JPG",
-    link: "/portfolio",
+    link: "/portfolio/bouquets",
   },
   {
     id: "weddings",
     title: "Weddings & Event Design",
     image: "/images/offers/IMG_0251.JPG",
-    link: "/portfolio",
+    link: "/portfolio/weddings",
   },
   {
     id: "subscriptions",
@@ -49,7 +49,7 @@ const WhatWeOffer = () => {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className={`${greatVibes.className} text-5xl md:text-6xl lg:text-7xl text-graphite tracking-wide`}>
-            What We Offer
+            What I Offer
           </h2>
         </div>
 

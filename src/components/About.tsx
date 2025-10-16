@@ -7,7 +7,7 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
-const AboutTeaser = () => {
+const About = () => {
   return (
     <section className="bg-beige/40 py-12 md:py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto text-center">
@@ -16,17 +16,17 @@ const AboutTeaser = () => {
         </h2>
 
         <p className="text-base md:text-lg text-graphite/90 leading-relaxed max-w-3xl mx-auto mb-4">
-          I'm <span className="font-semibold">Iryna Melnyk</span> - a florist & stylist crafting airy, romantic florals
+          I&apos;m <span className="font-semibold">Iryna Melnyk</span> - a florist & stylist crafting airy, romantic florals
           with soft textures and timeless palettes.
         </p>
 
         <p className="text-base md:text-lg text-graphite/75 leading-relaxed max-w-3xl mx-auto mb-8 italic">
-          My work is about capturing life's tender, unforgettable moments.
+          My work is about capturing life&apos;s tender, unforgettable moments.
         </p>
 
         <Link
           href="/about"
-          className="inline-block px-8 py-3 rounded-lg bg-graphite/10 text-graphite hover:bg-graphite hover:text-ivory transition-all duration-300 font-semibold text-base md:text-lg"
+          className="inline-block px-8 py-3 rounded-full bg-graphite/10 text-graphite hover:bg-graphite hover:text-ivory transition-all duration-300 font-semibold text-base md:text-lg border-2 border-graphite"
         >
           Learn More
         </Link>
@@ -35,4 +35,4 @@ const AboutTeaser = () => {
   );
 };
 
-export default AboutTeaser;
+export default About;
