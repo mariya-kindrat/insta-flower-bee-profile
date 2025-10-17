@@ -49,7 +49,7 @@ const WhatWeOffer = () => {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className={`${greatVibes.className} text-5xl md:text-6xl lg:text-7xl text-graphite tracking-wide`}>
-            What I Offer
+            What We Offer
           </h2>
         </div>
 

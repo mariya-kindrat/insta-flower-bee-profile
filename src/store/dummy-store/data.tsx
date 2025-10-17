@@ -92,7 +92,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
       "/images/wedding1/IMG_1668.jpg",
       "/images/wedding1/photo_9.jpeg",
     ],
-    description: "Beautifully arranged baskets for all occasions.",
+    description: "Beautifully crafted floral arrangements for various occasions.",
   },
 
   {
@@ -122,7 +122,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
   {
     id: "6",
     slug: "workshop",
-    title: "Floral Workshop",
+    title: "Spring Floral Workshop",
     category: "event",
     cover: "/images/workShop/photo-63.jpg",
     images: [
@@ -135,7 +135,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
       "/images/workShop/photo-137.jpg",
       "/images/workShop/photo-63.jpg",
     ],
-    description: "Hands-on floral arrangement workshop for enthusiasts.",
+    description: "Spring floral arrangement workshop with pastel tones.",
   },
 
   {
@@ -187,5 +187,34 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     ],
     description: "Professional floral installations and venue decorations.",
   },
+  {
+    id: "9",
+    slug: "workshop",
+    title: "Fall Floral Workshop",
+    category: "event",
+    cover: "/images/fall/photo-12.jpg",
+    images: [
+      "/images/fall/photo-3.jpg",
+      "/images/fall/photo-4.jpg",
+      "/images/fall/photo-6.jpg",
+      "/images/fall/photo-7.jpg",
+      "/images/fall/photo-9.jpg",
+      "/images/fall/photo-10.jpg",
+      "/images/fall/photo-23.jpg",
+      "/images/fall/photo-12.jpg",
+      "/images/fall/photo-27.jpg",
+      "/images/fall/photo-33.jpg",
+      "/images/fall/photo-34.jpg",
+      "/images/fall/photo-35.jpg",
+      "/images/fall/photo-36.jpg",
+      "/images/fall/photo-37.jpg",
+      "/images/fall/photo-38.jpg",
+      "/images/fall/photo-39.jpg",
+      "/images/fall/photo-42.jpg",
+      "/images/fall/photo-46.jpg",
+
+    ],
+    description: "Seasonal fall floral arrangement workshop with warm tones.",
+  }
 
 ];
