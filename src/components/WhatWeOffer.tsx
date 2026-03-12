@@ -38,7 +38,7 @@ const offers: OfferItem[] = [
     id: "subscriptions",
     title: "Subscriptions",
     image: "/images/offers/irynamy.JPG",
-    link: "/contact",
+    link: "/services",
   },
 ];
 
@@ -48,9 +48,10 @@ const WhatWeOffer = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className={`${greatVibes.className} text-5xl md:text-6xl lg:text-7xl text-graphite tracking-wide`}>
+          <h2 className={`${greatVibes.className} text-6xl md:text-7xl lg:text-8xl text-graphite tracking-wide`}>
             What We Offer
           </h2>
+          <div className="w-16 h-px bg-graphite/10 mx-auto mt-4" />
         </div>
 
         {/* Offers Grid */}
@@ -59,7 +60,7 @@ const WhatWeOffer = () => {
             <Link
               key={offer.id}
               href={offer.link}
-              className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-[350ms] ease-in-out"
             >
               {/* Image Container */}
               <div className="relative h-80 md:h-96 overflow-hidden">

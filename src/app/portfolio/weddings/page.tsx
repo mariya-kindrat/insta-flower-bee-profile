@@ -6,11 +6,11 @@ const WeddingsPage = () => {
   const weddings = PORTFOLIO_DATA.filter((i) => i.category === "wedding");
 
   return (
-    <main className="px-6 md:px-10 lg:px-20 py-10">
-      <BackButton href="/portfolio" label="Back to Portfolio" className="mb-6" />
-      <h1 className="font-serif text-3xl mb-6">Wedding Portfolio</h1>
+    <main className="px-6 md:px-10 lg:px-20 py-10 max-w-8xl mx-auto">
+      <BackButton href="/portfolio" label="Back to Portfolio" className="mb-8" />
+      <h1 className="font-serif text-4xl mb-10 text-center">Wedding Portfolio</h1>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
         {weddings.map((item) => (
           <PortfolioCard
             key={item.id}

@@ -41,9 +41,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 <p className="text-graphite text-lg md:text-xl font-medium tracking-wideish mb-2">
                   &copy; {new Date().getFullYear()} Iryna Melnyk · Florist
                 </p>
-                <p className="text-graphite/70 text-sm md:text-base">
-                  Timeless flowers for heartfelt moments
-                </p>
+
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 text-graphite">

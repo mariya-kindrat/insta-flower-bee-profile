@@ -44,21 +44,24 @@ hr {
   border-radius: 9999px;
 }
 
-/* Perfecto Calligraphy - self-hosted (personal use) */
-@font-face {
-  font-family: "Perfecto Calligraphy";
-  src:
-    url("/fonts/perfecto-calligraphy/PerfectoCalligraphy.woff2") format("woff2"),
-    url("/fonts/perfecto-calligraphy/PerfectoCalligraphy.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
 }
 
-/* Utility for elegant calligraphy headings */
-.font-calligraphy {
-  font-family: "Perfecto Calligraphy", var(--font-serif, Georgia), serif;
-  letter-spacing: -0.01em;
-  /* Enable common ligatures in supporting browsers */
-  font-variant-ligatures: common-ligatures;
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.55));
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
 }

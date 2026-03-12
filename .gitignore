@@ -42,3 +42,6 @@ next-env.d.ts
 CODE_REVIEW_SUMMARY.md
 CONTACT_FORM_SETUP.md
 QUICK_REFERENCE.md
+
+# md files
+*.md

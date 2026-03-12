@@ -5,7 +5,7 @@ import { PortfolioCardProps } from "@/types";
 const PortfolioCard = ({ href, title, cover }: PortfolioCardProps) => {
   return (
     <Link href={href} className="group block select-none">
-      <div className="relative aspect-[4/5] group bg-white rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300">
+      <div className="relative aspect-[4/5] bg-white rounded-2xl p-4 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-[400ms] ease-in-out">
         <div className="relative w-full h-full rounded-xl overflow-hidden">
           <Image
             src={cover}
