@@ -119,7 +119,7 @@ export const POST = async (request: NextRequest): Promise<NextResponse> => {
         { 
           error: "Failed to send email", 
           details: error.message || "Unknown error",
-          code: (error as any).name || "RESEND_ERROR"
+          code: (error as Error).name || "RESEND_ERROR"
         },
         { status: 500 }
       );
@@ -129,12 +129,12 @@ export const POST = async (request: NextRequest): Promise<NextResponse> => {
       { message: "Email sent successfully", data },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error processing contact form:", error);
     return NextResponse.json(
       { 
         error: "Internal server error", 
-        details: error.message || "Unknown error" 
+        details: (error as Error).message || "Unknown error" 
       },
       { status: 500 }
     );
