@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, CameraIcon } from "@heroicons/react/24/outline";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +20,7 @@ const Header = () => {
     { href: "/about", label: "About" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/contact", label: "Contact" },
+
   ];
 
   return (
@@ -31,7 +32,7 @@ const Header = () => {
             className="font-serif text-2xl md:text-3xl font-bold tracking-wide text-graphite hover:text-forest transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm"
             onClick={closeMenu}
           >
-            Iryna Melnyk
+            Flower Bee
           </Link>
 
           <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
@@ -59,6 +60,15 @@ const Header = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-forest transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+            <a
+              href="https://www.instagram.com/instaflowerbee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
+            >
+              <CameraIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+              <span>Instagram</span>
+            </a>
           </nav>
 
 
@@ -89,9 +99,20 @@ const Header = () => {
                   onClick={closeMenu}
                   className="text-lg font-medium text-graphite hover:text-forest transition-colors duration-300 py-2 px-4 rounded-sm hover:bg-champagne focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory"
                 >
+
                   {item.label}
                 </Link>
               ))}
+              <a
+                href="https://www.instagram.com/instaflowerbee"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="text-lg font-medium text-graphite hover:text-forest transition-colors duration-300 py-2 px-4 rounded-sm hover:bg-champagne focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory flex items-center gap-3"
+              >
+                <CameraIcon className="h-6 w-6" />
+                <span>Instagram</span>
+              </a>
             </div>
           </nav>
         </div>

@@ -25,7 +25,7 @@ const offers: OfferItem[] = [
   {
     id: "installations",
     title: "Floral Installations",
-    image: "/images/offers/IMG_0265.JPG",
+    image: "/images/wedding/img19.JPG",
     link: "/portfolio/bouquets",
   },
   {

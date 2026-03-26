@@ -12,7 +12,7 @@ const PortfolioPage = () => {
         <Link href="/portfolio/bouquets" className="group rounded-2xl border border-hairline bg-white/70 overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-[350ms] ease-in-out">
           <div className="relative w-full h-[520px]">
             <Image
-              src="/images/bouque.jpeg"
+              src="/images/bouquet/photo-9.jpg"
               alt="Bouquets"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -40,7 +40,7 @@ const PortfolioPage = () => {
         <Link href="/portfolio/events" className="group rounded-2xl border border-hairline bg-white/70 overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-[350ms] ease-in-out">
           <div className="relative w-full h-[520px]">
             <Image
-              src="/images/birthday/img5.jpg"
+              src="/images/workshop/photo-63.jpg"
               alt="Events"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import { CameraIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import { CameraIcon, EnvelopeIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { RootLayoutProps } from "@/types";
@@ -39,7 +39,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-center md:text-left">
                 <p className="text-graphite text-lg md:text-xl font-medium tracking-wideish mb-2">
-                  &copy; {new Date().getFullYear()} Iryna Melnyk · Florist
+                  &copy; {new Date().getFullYear()} Flower Bee
                 </p>
 
               </div>
@@ -49,9 +49,17 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                   href="/contact"
                   className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
                 >
-                  <EnvelopeIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                  <PaperAirplaneIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                   <span>Contact</span>
                 </Link>
+
+                <a
+                  href="mailto:instaFlowerbee@gmail.com"
+                  className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
+                >
+                  <EnvelopeIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                  <span>instaFlowerbee@gmail.com</span>
+                </a>
 
                 <a
                   href="https://www.instagram.com/instaflowerbee"

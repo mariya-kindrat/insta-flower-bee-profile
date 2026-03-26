@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Background Image with Slow Zoom */}
       <div className="absolute inset-0 w-full h-full animate-slow-zoom z-0">
         <Image
-          src="/images/wedding1/IMG_3009.jpg"
+          src="/images/wedding/img20.JPG"
           alt="Luxury wedding floral designs by Iryna Melnyk"
           fill
           className="object-cover"
@@ -41,7 +41,7 @@ const Hero = () => {
           <h1
             className={`${greatVibes.className} text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] text-white leading-[0.85] drop-shadow-md`}
           >
-            Iryna Melnyk
+            Flower Bee
           </h1>
           <p
             className={`${cormorant.className} mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl text-white/90 font-light tracking-[0.25em] uppercase`}
