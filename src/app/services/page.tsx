@@ -12,7 +12,7 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Services | Custom Reminders & Flower Packages | Iryna Melnyk",
+  title: "Services | Custom Reminders & Flower Packages | Flowerbee Boutique",
   description:
     "Discover our custom occasion reminders and year-round flower packages. Personalized floral services for every celebration and season.",
   alternates: { canonical: "/services" },

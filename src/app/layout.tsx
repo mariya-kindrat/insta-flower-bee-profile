@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Florist & Wedding Decorator in Connecticut | Iryna Melnyk",
+  title: "Florist & Wedding Decorator in Connecticut | Flowerbee Boutique",
   description: "Wedding florist and event decoration in Connecticut. Elegant floral designs by Iryna Melnyk.",
 };
 
