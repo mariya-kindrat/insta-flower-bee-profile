@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 
 const Hero = () => {
   return (
-    <section className="relative h-[68vh] md:h-[70vh] min-h-[500px] overflow-hidden flex items-center justify-center pb-12 md:pb-16">
+    <section className="relative h-[68vh] md:h-[70vh] min-h-[500px] overflow-hidden flex items-center justify-center pb-8 md:pb-10">
       {/* Background Image with Slow Zoom */}
       <div className="absolute inset-0 w-full h-full animate-slow-zoom z-0">
         <Image

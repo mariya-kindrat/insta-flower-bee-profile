@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Great_Vibes } from "next/font/google";
+import { Great_Vibes, Cormorant_Garamond } from "next/font/google";
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
@@ -8,9 +8,16 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
 interface OfferItem {
   id: string;
   title: string;
+  subtitle: string;
   image: string;
   link: string;
 }
@@ -18,25 +25,29 @@ interface OfferItem {
 const offers: OfferItem[] = [
   {
     id: "arrangements",
-    title: "Arrangements & Bouquets",
+    title: "Arrangements",
+    subtitle: "Bespoke Bouquets",
     image: "/images/offers/IMG_1672.JPG",
     link: "/portfolio/bouquets",
   },
   {
     id: "installations",
-    title: "Floral Installations",
+    title: "Installations",
+    subtitle: "Floral Architecture",
     image: "/images/wedding/img19.JPG",
     link: "/portfolio/bouquets",
   },
   {
     id: "weddings",
-    title: "Weddings & Event Design",
+    title: "Weddings",
+    subtitle: "Event Design",
     image: "/images/offers/IMG_0251.JPG",
     link: "/portfolio/weddings",
   },
   {
     id: "subscriptions",
     title: "Subscriptions",
+    subtitle: "Weekly Blooms",
     image: "/images/offers/irynamy.JPG",
     link: "/services",
   },
@@ -44,42 +55,63 @@ const offers: OfferItem[] = [
 
 const WhatWeOffer = () => {
   return (
-    <section className="py-16 md:py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-12 pb-16 md:pt-16 md:pb-24 px-6 bg-white relative overflow-hidden">
+      {/* Background Decorative Element */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-beige/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-ivory/30 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className={`${greatVibes.className} text-6xl md:text-7xl lg:text-8xl text-graphite tracking-wide`}>
+          <span className={`${cormorant.className} text-xs md:text-sm uppercase tracking-[0.4em] text-graphite/40 mb-4 block font-medium`}>
+            A Curated Experience
+          </span>
+          <h2 className={`${greatVibes.className} text-6xl md:text-7xl lg:text-8xl text-graphite leading-none`}>
             What We Offer
           </h2>
-          <div className="w-16 h-px bg-graphite/10 mx-auto mt-4" />
+          <div className="w-12 h-px bg-gold/30 mx-auto mt-6" />
         </div>
 
         {/* Offers Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {offers.map((offer) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-16 lg:gap-y-0">
+          {offers.map((offer, index) => (
             <Link
               key={offer.id}
               href={offer.link}
-              className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-[350ms] ease-in-out"
+              className={`group flex flex-col ${
+                index % 2 !== 0 ? "lg:mt-10" : "lg:mt-0"
+              }`}
             >
               {/* Image Container */}
-              <div className="relative h-80 md:h-96 overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden bg-ivory shadow-sm transition-all duration-700 group-hover:shadow-2xl group-hover:shadow-gold/5 rounded-sm">
                 <Image
                   src={offer.image}
                   alt={offer.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                
+                {/* Elegant Inner Frame */}
+                <div className="absolute inset-0 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="absolute inset-4 border border-white/10 pointer-events-none" />
               </div>
 
-              {/* Title Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-white text-center leading-tight">
+              {/* Text Content */}
+              <div className="mt-8 text-center lg:text-left px-2">
+                <span className={`${cormorant.className} text-[11px] md:text-xs uppercase tracking-[0.25em] text-gold mb-2 block font-semibold`}>
+                  {offer.subtitle}
+                </span>
+                <h3 className={`${cormorant.className} text-2xl md:text-3xl text-graphite font-light italic leading-tight`}>
                   {offer.title}
                 </h3>
+                
+                <div className="mt-5 flex items-center justify-center lg:justify-start gap-3 group/btn">
+                  <div className="w-6 h-px bg-graphite/20 transition-all duration-500 group-hover/btn:w-10 group-hover/btn:bg-gold" />
+                  <span className={`${cormorant.className} text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-graphite/65 group-hover/btn:text-graphite transition-colors duration-300`}>
+                    View Collection
+                  </span>
+                </div>
               </div>
             </Link>
           ))}

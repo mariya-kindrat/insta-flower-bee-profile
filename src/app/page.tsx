@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
+import CuratedGallery from "@/components/CuratedGallery";
 import WhatWeOffer from "@/components/WhatWeOffer";
+import Testimonial from "@/components/Testimonial";
 import About from "@/components/About";
 import { Metadata } from "next";
 
@@ -15,7 +17,9 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
+      <CuratedGallery />
       <WhatWeOffer />
+      <Testimonial />
       <About />
     </main>
   );

@@ -55,7 +55,7 @@ const Header = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-forest transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <a
+            {/* <a
               href="https://www.instagram.com/instaflowerbee"
               target="_blank"
               rel="noopener noreferrer"
@@ -63,7 +63,7 @@ const Header = () => {
             >
               <CameraIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
               <span>Instagram</span>
-            </a>
+            </a> */}
           </nav>
 
 

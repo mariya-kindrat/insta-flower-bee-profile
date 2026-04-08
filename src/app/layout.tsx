@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import { CameraIcon, EnvelopeIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { CameraIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import Header from "@/components/Header";
 import Link from "next/link";
+import Image from "next/image";
 import { RootLayoutProps } from "@/types";
 
 const cormorant = Cormorant_Garamond({
@@ -20,10 +21,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Florist & Wedding Decorator in Connecticut | Flowerbee Boutique",
-  description: "Wedding florist and event decoration in Connecticut. Elegant floral designs by Iryna Melnyk.",
+  title: {
+    default: "Flower Bee Boutique | Wedding Florist & Event Decor in Connecticut",
+    template: "%s | Flower Bee Boutique",
+  },
+  description:
+    "Flower Bee Boutique by Iryna Melnyk offers elegant wedding florals, bouquets, and event decor in Connecticut, including Stamford and Shelton.",
+  alternates: { canonical: "/" },
+  icons: "/images/bee_BLACK.svg",
 };
-
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
@@ -34,42 +40,115 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           {children}
         </main>
 
-        <footer className="bg-ivory py-12 border-t border-hairline mt-auto">
+        <footer className="bg-ivory pt-10 pb-6 border-t border-hairline/60 mt-auto">
           <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-20">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="text-center md:text-left">
-                <p className="text-graphite text-lg md:text-xl font-medium tracking-wideish mb-2">
-                  &copy; {new Date().getFullYear()} Flower Bee
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-10">
+              {/* Brand Identity */}
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 font-serif text-xl font-bold tracking-wider text-graphite hover:text-forest transition-all duration-300 group"
+                >
+                  <span>FLOWER</span>
+                  <Image
+                    src="/images/bee_BLACK.svg"
+                    alt="Logo"
+                    width={18}
+                    height={18}
+                    className="group-hover:rotate-12 transition-transform duration-500"
+                  />
+                  <span>BEE</span>
+                </Link>
+                <p className="text-graphite/60 text-[13px] leading-relaxed max-w-[240px] font-sans">
+                  Romantic, garden-style florals for modern weddings and refined celebrations.
                 </p>
-
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 text-graphite">
+              {/* Navigation */}
+              <div>
+                <h3 className="font-serif text-[10px] font-bold text-graphite/40 mb-4 tracking-[0.2em] uppercase">Curation</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/portfolio" className="text-graphite/70 hover:text-forest transition-colors text-[10px] uppercase tracking-[0.15em] font-medium">
+                      Portfolio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services" className="text-graphite/70 hover:text-forest transition-colors text-[10px] uppercase tracking-[0.15em] font-medium">
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="text-graphite/70 hover:text-forest transition-colors text-[10px] uppercase tracking-[0.15em] font-medium">
+                      Our Story
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Connect */}
+              <div>
+                <h3 className="font-serif text-[10px] font-bold text-graphite/40 mb-4 tracking-[0.2em] uppercase">Connect</h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a
+                      href="mailto:instaFlowerbee@gmail.com"
+                      className="text-graphite/70 hover:text-forest transition-colors text-[13px] flex items-center gap-2 group font-sans"
+                    >
+                      <EnvelopeIcon className="h-3.5 w-3.5 text-graphite/30 group-hover:text-forest transition-colors" />
+                      <span>flowerbeeboutique@gmail.com</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/instaflowerbee"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-graphite/70 hover:text-forest transition-colors text-[13px] flex items-center gap-2 group font-sans"
+                    >
+                      <CameraIcon className="h-3.5 w-3.5 text-graphite/30 group-hover:text-forest transition-colors" />
+                      <span>@instaflowerbee</span>
+                    </a>
+                  </li>
+                  <li>
+                    <Link
+                      href="/contact"
+                      className="text-graphite/70 hover:text-forest transition-colors text-[13px] flex items-center gap-2 group font-sans"
+                    >
+                      <MapPinIcon className="h-3.5 w-3.5 text-graphite/30 group-hover:text-forest transition-colors" />
+                      <span>Connecticut, USA</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Philosophy */}
+              <div>
+                <h3 className="font-serif text-[10px] font-bold text-graphite/40 mb-4 tracking-[0.2em] uppercase">Philosophy</h3>
+                <p className="text-graphite/50 text-[13px] leading-relaxed font-serif mb-4">
+                  Capturing the fleeting beauty of nature&apos;s most romantic moments with intentional design.
+                </p>
                 <Link
                   href="/contact"
-                  className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
+                  className="inline-block border-b border-forest/20 text-forest/80 text-[10px] uppercase tracking-[0.25em] font-bold pb-0.5 hover:border-forest hover:text-forest transition-all"
                 >
-                  <PaperAirplaneIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Contact</span>
+                  Inquire
                 </Link>
+              </div>
+            </div>
 
-                <a
-                  href="mailto:instaFlowerbee@gmail.com"
-                  className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
-                >
-                  <EnvelopeIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  <span>instaFlowerbee@gmail.com</span>
-                </a>
-
-                <a
-                  href="https://www.instagram.com/instaflowerbee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-forest transition-colors duration-300 flex items-center gap-3 text-base md:text-lg font-medium group focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 focus:ring-offset-ivory rounded-sm p-2"
-                >
-                  <CameraIcon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Instagram</span>
-                </a>
+            {/* Sub-footer */}
+            <div className="pt-5 border-t border-hairline/40 flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-graphite/30 text-[9px] uppercase tracking-[0.2em]">
+                &copy; {new Date().getFullYear()} Flower Bee. Est. 2018.
+              </p>
+              <div className="flex items-center gap-8">
+                <Link href="#" className="text-graphite/20 hover:text-graphite transition-colors text-[8px] uppercase tracking-[0.15em]">
+                  Privacy
+                </Link>
+                <Link href="#" className="text-graphite/20 hover:text-graphite transition-colors text-[8px] uppercase tracking-[0.15em]">
+                  Terms
+                </Link>
               </div>
             </div>
           </div>
