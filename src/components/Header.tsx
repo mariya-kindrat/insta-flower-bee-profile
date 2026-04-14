@@ -98,7 +98,7 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <a
+              {/* <a
                 href="https://www.instagram.com/instaflowerbee"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -107,7 +107,7 @@ const Header = () => {
               >
                 <CameraIcon className="h-6 w-6" />
                 <span>Instagram</span>
-              </a>
+              </a> */}
             </div>
           </nav>
         </div>

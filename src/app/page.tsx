@@ -1,8 +1,10 @@
 import Hero from "@/components/Hero";
+import MonthSpecialEvent from "@/components/MonthSpecialEvent";
 import CuratedGallery from "@/components/CuratedGallery";
 import WhatWeOffer from "@/components/WhatWeOffer";
 import Testimonial from "@/components/Testimonial";
 import About from "@/components/About";
+import SpecialOfferModal from "@/components/SpecialOfferModal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +18,9 @@ export const metadata: Metadata = {
 const HomePage = () => {
   return (
     <main>
+      <SpecialOfferModal />
       <Hero />
+      <MonthSpecialEvent />
       <CuratedGallery />
       <WhatWeOffer />
       <Testimonial />
